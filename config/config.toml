@@ -1,0 +1,34 @@
+[app]
+name = "python-fastapi-admin"
+env = "dev"
+host = "127.0.0.1"
+port = 8003
+
+[secret]
+secret_key = "your-secret-key"
+algorithm = "HS256"
+access_token_expires = 60
+
+[database]
+user = "root"
+password = "123456"
+host = "localhost"
+port = 3306
+database = "python_fastapi_admin"
+echo = true # 线下环境设置成true，线上环境改为false
+pool_size = 10
+max_overflow = 20
+pool_timeout = 30
+pool_recycle = 1800
+
+[redis]
+host = "localhost"
+port = 6379
+db = 0
+
+[logger]
+dir = "logs"
+file = "app.log"
+level = "INFO"
+rotation = "50 MB" # 50 MB，用整数字节表示
+retention = 30 # 保留最近30个日志文件
